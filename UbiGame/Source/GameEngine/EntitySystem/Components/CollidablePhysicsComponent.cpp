@@ -63,6 +63,12 @@ void CollidablePhysicsComponent::Update()
 			}
 			if (itemid == 2) {
 				GameEngineMain::GetInstance()->m_gameBoard->ClearObstacles(GameEngineMain::GetInstance()->m_gameBoard->m_somegodid());
+				if (GameEngineMain::GetInstance()->m_gameBoard->m_somegodid() == 1) {
+					GetEntity()->SetPos(GetEntity()->GetPos() + sf::Vector2f(-120.f, 675.f));
+				}
+				else if (GameEngineMain::GetInstance()->m_gameBoard->m_somegodid() == 2) {
+					GetEntity()->SetPos(GetEntity()->GetPos() + sf::Vector2f(100.f, -710.f));
+				}
 			}
 			if (itemid == 3) {
 				GameEngineMain::GetInstance()->m_gameBoard->PickUpItem(colComponent->GetEntity());

@@ -31,11 +31,11 @@ void npcMovementController::OnAddToWorld()
 		t = 5.f;
 		break;
 	case 1:
-		t = 3.f;
-		times.push_back(3.f);
-		times.push_back(4.f);
-		times.push_back(4.f);
-		times.push_back(3.f);
+		t = (float)1.5;
+		times.push_back((float)1.5);
+		times.push_back(2.f);
+		times.push_back(2.f);
+		times.push_back((float)1.5);
 		directions.push_back(0.f);
 		directions.push_back(1.f);
 		directions.push_back(2.f);
@@ -59,13 +59,13 @@ void npcMovementController::OnAddToWorld()
 
 		break;
 	case 3:
-		t = (float)3.5;
-		times.push_back((float)3.5);
-		times.push_back((float)3.5);
-		times.push_back((float)3.5);
+		t = 3.f;
 		times.push_back(3.f);
 		times.push_back(3.f);
-		times.push_back((float)3.5);
+		times.push_back(3.f);
+		times.push_back(3.f);
+		times.push_back(3.f);
+		times.push_back(3.f);
 		directions.push_back(1.f);
 		directions.push_back(2.f);
 		directions.push_back(1.f);
@@ -131,7 +131,7 @@ void npcMovementController::Update()
 	if (npcNum == 1)
 	{
 		t -= dt;
-		dir(directions[index], m_animComponent, playerVel, dt, wantedVel);
+		dir(directions[index], m_animComponent, playerVel*2, dt, wantedVel);
 		if (t <= 0)
 		{
 			if (index > 2) index = 0;

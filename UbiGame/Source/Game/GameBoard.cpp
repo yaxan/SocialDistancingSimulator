@@ -284,7 +284,7 @@ void GameBoard::CreateNPC(int npcNum)
 		m_obstacles.push_back(m_npc);
 		break;
 	case 3:
-		m_npc->SetPos(sf::Vector2f(1300.f, 250.f));
+		m_npc->SetPos(sf::Vector2f(1300.f, 350.f));
 		m_obstacles.push_back(m_npc);
 		break;
 	case 4:
@@ -382,11 +382,31 @@ void GameBoard::Gameoverscreen() {
 	sRender->SetZLevel(-1);
 }
 
+void GameBoard::winScreen() {
+	GameEngine::Entity* bg = new GameEngine::Entity();
+	GameEngine::GameEngineMain::GetInstance()->AddEntity(bg);
+
+	bg->SetPos(sf::Vector2f(960.f, 540.f));
+	bg->SetSize(sf::Vector2f(1920.f, 1080.f));
+
+	GameEngine::SpriteRenderComponent* sRender = static_cast<GameEngine::SpriteRenderComponent*>
+		(bg->AddComponent<GameEngine::SpriteRenderComponent>());
+	sRender->SetFillColor(sf::Color::Transparent);
+	sRender->SetTexture(GameEngine::eTexture::winScreen);
+	sRender->SetZLevel(-1);
+}
+
 void GameBoard::Update()
 {	
 	if (m_health <= 0) {
 		m_gameover = true;
 		Gameoverscreen();
+		m_backgroundid = 3;
+		ClearObstacles(m_backgroundid);
+	}
+	if (m_points == 9) {
+		m_gameover = true;
+		winScreen();
 		m_backgroundid = 3;
 		ClearObstacles(m_backgroundid);
 	}

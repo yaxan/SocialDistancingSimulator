@@ -166,6 +166,11 @@ void GameEngineMain::UpdateWindowEvents()
 					GameEngineMain::GetInstance()->m_gameBoard->HideDiagloue();
 					GameEngineMain::GetInstance()->m_gameBoard->ChangeWeight(25);
 					GameEngineMain::GetInstance()->m_gameBoard->Addpoint(1);
+					
+					auto i = std::find(GameEngineMain::GetInstance()->m_gameBoard->m_obstacles.begin(),
+						GameEngineMain::GetInstance()->m_gameBoard->m_obstacles.end(), 
+						GameEngineMain::GetInstance()->m_gameBoard->m_interactingEntity);
+					GameEngineMain::GetInstance()->m_gameBoard->m_obstacles.erase(i);
 					RemoveEntity(GameEngineMain::GetInstance()->m_gameBoard->m_interactingEntity);
 				}
 				if (GameEngineMain::GetInstance()->m_gameBoard->id() == 4) {

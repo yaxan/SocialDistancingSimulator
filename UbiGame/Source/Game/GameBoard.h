@@ -20,6 +20,7 @@ namespace Game
 		bool IsGameOver() const{ return m_gameover; };
 		void HealthBar();
 		void Gameoverscreen();
+		void winScreen();
 		void Update();
 		void CreateNewItem(const sf::Vector2f& position, const sf::Vector2f& size, int itemtexture, int _setzlevel, int _itemid, int _weight, int _points, int _damage);
 		void ChangeHealthLevel(int amount);

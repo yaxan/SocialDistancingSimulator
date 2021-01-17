@@ -19,6 +19,7 @@ namespace GameEngine
 			GameOver,
 			PickUp,
 			Grassbg,
+			winScreen,
 			Peanut = 100,
 			Can = 101,
 			Spam = 102,
@@ -45,6 +46,7 @@ namespace GameEngine
 		case eTexture::PickUp: return "pickup.png";
 		case eTexture::GameOver: return "gameover.png";
 		case eTexture::Grassbg: return "grassbg.png";
+		case eTexture::winScreen: return "winningScreen.png";
 		case eTexture::Peanut: return "peanutButter.png";
 		case eTexture::Can: return "can.png";
 		case eTexture::Spam: return "spam.png";
