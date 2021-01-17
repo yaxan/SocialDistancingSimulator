@@ -31,15 +31,90 @@ void AnimationManager::InitStaticGameAnimations()
 	3)
 	);
 	*/
-	m_animDefinitions.push_back
-	(
-		SAnimationDefinition(
-			EAnimationId::PlayerWink,
-			eTexture::Player,
-			sf::Vector2i(0, 0),
-			10,
-			3)
-	);
+    m_animDefinitions.push_back
+    (
+        SAnimationDefinition(
+            EAnimationId::idle,
+            eTexture::Player,
+            sf::Vector2i(0, 0),
+            4,
+            10)
+    );
+
+    m_animDefinitions.push_back(
+        SAnimationDefinition(
+            EAnimationId::walkLeft,
+            eTexture::Player,
+            sf::Vector2i(0, 3),
+            4,
+            10)
+    );
+    m_animDefinitions.push_back(
+        SAnimationDefinition(
+            EAnimationId::walkUp,
+            eTexture::Player,
+            sf::Vector2i(0, 2),
+            4,
+            10)
+    );
+    m_animDefinitions.push_back(
+        SAnimationDefinition(
+            EAnimationId::walkRight,
+            eTexture::Player,
+            sf::Vector2i(0, 4),
+            4,
+            10)
+    );
+    m_animDefinitions.push_back(
+        SAnimationDefinition(
+            EAnimationId::walkDown,
+            eTexture::Player,
+            sf::Vector2i(0, 1),
+            4,
+            10)
+    );
+    m_animDefinitions.push_back
+    (
+        SAnimationDefinition(
+            EAnimationId::idleNPC,
+            eTexture::npc,
+            sf::Vector2i(0, 0),
+            4,
+            10)
+    );
+
+    m_animDefinitions.push_back(
+        SAnimationDefinition(
+            EAnimationId::walkLeftNPC,
+            eTexture::npc,
+            sf::Vector2i(0, 3),
+            4,
+            10)
+    );
+    m_animDefinitions.push_back(
+        SAnimationDefinition(
+            EAnimationId::walkUpNPC,
+            eTexture::npc,
+            sf::Vector2i(0, 2),
+            4,
+            10)
+    );
+    m_animDefinitions.push_back(
+        SAnimationDefinition(
+            EAnimationId::walkRightNPC,
+            eTexture::npc,
+            sf::Vector2i(0, 4),
+            4,
+            10)
+    );
+    m_animDefinitions.push_back(
+        SAnimationDefinition(
+            EAnimationId::walkDownNPC,
+            eTexture::npc,
+            sf::Vector2i(0, 1),
+            4,
+            10)
+    );
 
 }
 

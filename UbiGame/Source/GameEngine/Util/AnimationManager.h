@@ -11,7 +11,16 @@ namespace GameEngine
 	{
 		enum type
 		{			
-			PlayerWink,
+			idle,
+			walkLeft,
+			walkRight,
+			walkDown,
+			walkUp,
+			idleNPC,
+			walkLeftNPC,
+			walkRightNPC,
+			walkDownNPC,
+			walkUpNPC,
 			None,
 		};
 	}

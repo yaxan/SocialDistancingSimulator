@@ -47,6 +47,13 @@ void RenderComponent::Render(sf::RenderTarget* target)
 		shape.setFillColor(m_fillColor);
 		shape.setPosition(pos);
 
+		if (GameEngineMain::GetInstance()->IsGameOver()) {
+			float seconds = GameEngineMain::GetInstance()->GetGameTime();
+			sf::Color gameOverColor = m_fillColor;
+			gameOverColor.a = (int)(255.f * seconds);
+			shape.setFillColor(gameOverColor);
+		}
+
 		target->draw(shape);
 	}	
 }

@@ -138,6 +138,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\GameEngine\EntitySystem\Components\TextRenderComponent.cpp" />
     <ClCompile Include="Source\GameEngine\Util\CameraManager.cpp" />
     <ClCompile Include="Source\GameEngine\EntitySystem\Components\ParticleComponent.cpp" />
     <ClCompile Include="Source\GameEngine\EntitySystem\Components\ParticleEmitterComponent.cpp" />
@@ -148,7 +149,9 @@
     <ClCompile Include="Source\GameEngine\EntitySystem\Components\CollidableComponent.cpp" />
     <ClCompile Include="Source\GameEngine\Util\CollisionManager.cpp" />
     <ClCompile Include="Source\GameEngine\Util\SoundManager.cpp" />
+    <ClCompile Include="Source\Game\Components\ItemEntity.cpp" />
     <ClCompile Include="Source\Game\Components\LinkedEntityComponent.cpp" />
+    <ClCompile Include="Source\Game\Components\npcMovementController.cpp" />
     <ClCompile Include="Source\Game\Components\PawnPhysicsComponent.cpp" />
     <ClCompile Include="Source\Game\Components\playerCameraComponent.cpp" />
     <ClCompile Include="Source\Game\Components\PlayerMovementComponent.cpp" />
@@ -162,6 +165,7 @@
     <ClCompile Include="Source\GameEngine\EntitySystem\Components\SpriteRenderComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\GameEngine\EntitySystem\Components\TextRenderComponent.h" />
     <ClInclude Include="Source\GameEngine\Util\CameraManager.h" />
     <ClInclude Include="Source\GameEngine\EntitySystem\Components\ParticleComponent.h" />
     <ClInclude Include="Source\GameEngine\EntitySystem\Components\ParticleEmitterComponent.h" />
@@ -172,7 +176,9 @@
     <ClInclude Include="Source\GameEngine\EntitySystem\Components\CollidableComponent.h" />
     <ClInclude Include="Source\GameEngine\Util\CollisionManager.h" />
     <ClInclude Include="Source\GameEngine\Util\SoundManager.h" />
+    <ClInclude Include="Source\Game\Components\ItemEntity.h" />
     <ClInclude Include="Source\Game\Components\LinkedEntitycomponent.h" />
+    <ClInclude Include="Source\Game\Components\npcMovementController.h" />
     <ClInclude Include="Source\Game\Components\PawnPhysicsComponent.h" />
     <ClInclude Include="Source\Game\Components\playerCameraCompenent.h" />
     <ClInclude Include="Source\Game\Components\PlayerMovementComponent.h" />
@@ -185,8 +191,29 @@
     <ClInclude Include="Source\GameEngine\EntitySystem\Components\SpriteRenderComponent.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Resources\img\Background.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\img\bg.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\img\gameover.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\img\healthbar.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="Resources\img\img\Player.png" />
+    <Image Include="Resources\img\npc.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="Resources\img\Obstacle.png" />
+    <Image Include="Resources\img\peanutButter.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\img\pickup.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="Resources\img\Player.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

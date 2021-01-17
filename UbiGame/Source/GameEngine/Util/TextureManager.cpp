@@ -4,6 +4,14 @@ using namespace GameEngine;
 
 TextureManager* TextureManager::sm_instance = nullptr;
 
+void GameEngine::TextureManager::UpdateTileRect()
+{
+}
+
+void GameEngine::TextureManager::UpdateSpriteParams()
+{
+}
+
 TextureManager::TextureManager()
 {
 	for (int a = 0; a < (int)eTexture::Count; ++a)

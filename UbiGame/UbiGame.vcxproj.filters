@@ -84,6 +84,15 @@
     <ClCompile Include="Source\Game\Components\PawnPhysicsComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Game\Components\ItemEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameEngine\EntitySystem\Components\TextRenderComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Components\npcMovementController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\GameEngine\GameEngineMain.h">
@@ -149,6 +158,15 @@
     <ClInclude Include="Source\Game\Components\PawnPhysicsComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Game\Components\ItemEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameEngine\EntitySystem\Components\TextRenderComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Components\npcMovementController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\img\img\Player.png">
@@ -158,6 +176,27 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\img\Obstacle.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\img\Background.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\img\bg.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\img\gameover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\img\healthbar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\img\npc.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\img\pickup.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\img\peanutButter.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

@@ -1,7 +1,9 @@
 #include "CollidablePhysicsComponent.h"
-
+#include "GameEngine/GameEngineMain.h"
 #include "GameEngine/Util/CollisionManager.h"
 #include "GameEngine/EntitySystem/Entity.h"
+#include "Game/GameBoard.h"
+
 
 #include <vector>
 
@@ -47,6 +49,27 @@ void CollidablePhysicsComponent::Update()
 		AABBRect colideBox = colComponent->GetWorldAABB();
 		if (myBox.intersects(colideBox, intersection))
 		{
+			int itemid = colComponent->GetEntity()->itemid;
+			int someotherid = colComponent->GetEntity()->someotherId;
+
+			if (itemid == -1) {
+				continue;
+			}
+
+			printf("%d\n", itemid);
+
+			if (itemid == 1) {
+
+			}
+			if (itemid == 2) {
+				GameEngineMain::GetInstance()->m_gameBoard->ClearObstacles(GameEngineMain::GetInstance()->m_gameBoard->m_somegodid());
+			}
+			if (itemid == 3) {
+				GameEngineMain::GetInstance()->m_gameBoard->PickUpItem(1);
+			}
+			if (itemid == 4) {
+				GameEngineMain::GetInstance()->m_gameBoard->PickUpBadItem();
+			}
 			sf::Vector2f pos = GetEntity()->GetPos();
 			if (intersection.width < intersection.height)
 			{

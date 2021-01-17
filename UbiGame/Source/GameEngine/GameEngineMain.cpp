@@ -11,8 +11,8 @@
 
 using namespace GameEngine;
 
-float GameEngineMain::WINDOW_HEIGHT = 500;
-float GameEngineMain::WINDOW_WIDTH = 500;
+float GameEngineMain::WINDOW_HEIGHT = 1080;
+float GameEngineMain::WINDOW_WIDTH = 1920;
 //Nullptr init for singleton class
 GameEngineMain* GameEngineMain::sm_instance = nullptr;
 sf::Clock		GameEngineMain::sm_deltaTimeClock;
@@ -157,8 +157,23 @@ void GameEngineMain::UpdateWindowEvents()
 			m_renderTarget = nullptr;		
 			break;
 		}
+		if (event.type == sf::Event::KeyReleased) {
+			if (event.key.code == sf::Keyboard::X) {
+				GameEngineMain::GetInstance()->m_gameBoard->HideDiagloue();
+			}
+			if (event.key.code == sf::Keyboard::E)
+				if (GameEngineMain::GetInstance()->m_gameBoard->id() == 2) {
+					GameEngineMain::GetInstance()->m_gameBoard->HideDiagloue();
+					GameEngineMain::GetInstance()->m_gameBoard->ChangeWeight(25);
+					GameEngineMain::GetInstance()->m_gameBoard->Addpoint(1);
+				}
+				if (GameEngineMain::GetInstance()->m_gameBoard->id() == 4) {
+					GameEngineMain::GetInstance()->m_gameBoard->HideDiagloue();
+					GameEngineMain::GetInstance()->m_gameBoard->ChangeHealthLevel(1);
+				}
+			}
+		}
 	}
-}
 
 
 void GameEngineMain::UpdateEntities()
