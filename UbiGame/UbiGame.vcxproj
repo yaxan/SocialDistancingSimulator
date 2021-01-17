@@ -191,13 +191,31 @@
     <ClInclude Include="Source\GameEngine\EntitySystem\Components\SpriteRenderComponent.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Resources\img\apple.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="Resources\img\Background.png">
       <DeploymentContent>true</DeploymentContent>
     </Image>
     <Image Include="Resources\img\bg.png">
       <DeploymentContent>true</DeploymentContent>
     </Image>
+    <Image Include="Resources\img\can.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\img\carrot.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\img\corn.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\img\eggplant.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="Resources\img\gameover.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\img\grassbg.png">
       <DeploymentContent>true</DeploymentContent>
     </Image>
     <Image Include="Resources\img\healthbar.png">
@@ -215,6 +233,165 @@
       <DeploymentContent>true</DeploymentContent>
     </Image>
     <Image Include="Resources\img\Player.png" />
+    <Image Include="Resources\img\soda.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\img\spam.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Resources\img\wipes.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\x64\Debug\UbiGame.tlog\CL.command.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Debug\UbiGame.tlog\CL.read.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Debug\UbiGame.tlog\CL.write.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Debug\UbiGame.tlog\link.command.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Debug\UbiGame.tlog\link.read.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Debug\UbiGame.tlog\link.write.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Debug\UbiGame.tlog\UbiGame.lastbuildstate">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Debug\vc140.idb">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Debug\vc140.pdb">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Release\UbiGame.tlog\CL.command.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Release\UbiGame.tlog\CL.read.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Release\UbiGame.tlog\CL.write.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Release\UbiGame.tlog\link.command.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Release\UbiGame.tlog\link.read.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Release\UbiGame.tlog\link.write.1.tlog">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Release\UbiGame.tlog\UbiGame.lastbuildstate">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Source\x64\Release\vc140.pdb">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Source\x64\Debug\UbiGame.log">
+      <DeploymentContent>true</DeploymentContent>
+    </Text>
+    <Text Include="Source\x64\Release\UbiGame.log">
+      <DeploymentContent>true</DeploymentContent>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Source\x64\Debug\AnimationComponent.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\CollidableComponent.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\CollidablePhysicsComponent.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\CollisionManager.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\Component.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\Entity.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\GameBoard.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\GameEngine.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\GameEngineMain.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\main.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\ObstacleEntity.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\PlayerEntity.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\PlayerMovementComponent.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\RenderComponent.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\SpriteRenderComponent.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Debug\TextureManager.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\CollidableComponent.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\CollidablePhysicsComponent.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\CollisionManager.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\Component.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\Entity.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\GameBoard.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\GameEngineMain.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\main.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\ObstacleEntity.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\PlayerEntity.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\PlayerMovementComponent.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\RenderComponent.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
+    <Object Include="Source\x64\Release\TextureManager.obj">
+      <DeploymentContent>true</DeploymentContent>
+    </Object>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
