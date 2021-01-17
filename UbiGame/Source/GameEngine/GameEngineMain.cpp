@@ -166,10 +166,12 @@ void GameEngineMain::UpdateWindowEvents()
 					GameEngineMain::GetInstance()->m_gameBoard->HideDiagloue();
 					GameEngineMain::GetInstance()->m_gameBoard->ChangeWeight(25);
 					GameEngineMain::GetInstance()->m_gameBoard->Addpoint(1);
+					RemoveEntity(GameEngineMain::GetInstance()->m_gameBoard->m_interactingEntity);
 				}
 				if (GameEngineMain::GetInstance()->m_gameBoard->id() == 4) {
 					GameEngineMain::GetInstance()->m_gameBoard->HideDiagloue();
 					GameEngineMain::GetInstance()->m_gameBoard->ChangeHealthLevel(1);
+					
 				}
 			}
 		}

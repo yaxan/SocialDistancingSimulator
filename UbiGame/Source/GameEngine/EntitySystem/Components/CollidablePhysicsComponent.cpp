@@ -65,7 +65,7 @@ void CollidablePhysicsComponent::Update()
 				GameEngineMain::GetInstance()->m_gameBoard->ClearObstacles(GameEngineMain::GetInstance()->m_gameBoard->m_somegodid());
 			}
 			if (itemid == 3) {
-				GameEngineMain::GetInstance()->m_gameBoard->PickUpItem(1);
+				GameEngineMain::GetInstance()->m_gameBoard->PickUpItem(colComponent->GetEntity());
 			}
 			if (itemid == 4) {
 				GameEngineMain::GetInstance()->m_gameBoard->PickUpBadItem();

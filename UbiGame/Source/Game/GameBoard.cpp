@@ -23,6 +23,7 @@ GameBoard::GameBoard()
 	, m_points(0)
 	, m_id(1)
 	, m_backgroundid(1)
+	, m_interactingEntity(nullptr)
 
 {
 	CreatePlayer();
@@ -112,11 +113,13 @@ void GameBoard::SpawnRoomItems(int id) {
 		CreateNewItem(sf::Vector2f(1700.f, -20.f), sf::Vector2f(500.f, 50.f), -1, -2, 0, 10, 20, 0);
 		CreateNewItem(sf::Vector2f(3840.f, 0.f), sf::Vector2f(3840.f, 2160.f), -1, -2, 0, 10, 20, 0);
 		CreateNewItem(sf::Vector2f(1300.f, 0.f), sf::Vector2f(200.f, 200.f), -1, -2, 2, 10, 20, 0);
+		//
 		CreateNewItem(sf::Vector2f(1450.f, 275.f), sf::Vector2f(100.f, 100.f), 100, 0, 3, 10, 20, 100);
 		CreateNewItem(sf::Vector2f(450.f, 400.f), sf::Vector2f(100.f, 100.f), 100, 0, 3, 10, 20, 101);
 		CreateNewItem(sf::Vector2f(1550.f, 620.f), sf::Vector2f(100.f, 100.f), 100, 0, 3, 10, 20, 102);
 		CreateNewItem(sf::Vector2f(200.f, 750.f), sf::Vector2f(100.f, 100.f), 100, 0, 3, 10, 20, 104);
 		CreateNewItem(sf::Vector2f(530.f, 60.f), sf::Vector2f(100.f, 100.f), 100, 0, 3, 10, 20, 103);
+		//
 		CreateNPC(0);
 		CreateNPC(1);
 		CreateNPC(2);
@@ -139,10 +142,12 @@ void GameBoard::SpawnRoomItems(int id) {
 		CreateNewItem(sf::Vector2f(0.f, 1080.f), sf::Vector2f(4000.f, 10.f), -1, -2, 0, 10, 20, 0);
 		CreateNewItem(sf::Vector2f(0.f, 980.f), sf::Vector2f(10.f, 2080.f), -1, -2, 0, 10, 20, 0);
 		CreateNewItem(sf::Vector2f(1100.f, 1000.f), sf::Vector2f(400.f, 70.f), -1, -2, 2, 10, 20, 0);
+		//
 		CreateNewItem(sf::Vector2f(200.f, 280.f), sf::Vector2f(100.f, 100.f), -1, 0, 3, 10, 20, 105);
 		CreateNewItem(sf::Vector2f(850.f, 400.f), sf::Vector2f(100.f, 100.f), -1, 0, 3, 10, 20, 106);
 		CreateNewItem(sf::Vector2f(1400.f, 800.f), sf::Vector2f(100.f, 100.f), -1, 0, 3, 10, 20, 107);
 		CreateNewItem(sf::Vector2f(680.f, 650.f), sf::Vector2f(100.f, 100.f), -1, 0, 3, 10, 20, 108);
+		//
 		CreateNPC(5);
 		CreateNPC(6);
 		CreateNPC(7);
@@ -150,8 +155,9 @@ void GameBoard::SpawnRoomItems(int id) {
 	}
 }
 
-void GameBoard::PickUpItem(int _id) {
+void GameBoard::PickUpItem(GameEngine::Entity*entity) {
 	GameEngine::Entity* dialogue = new GameEngine::Entity();
+	m_interactingEntity = entity;
 	GameEngine::SpriteRenderComponent* render = static_cast<GameEngine::SpriteRenderComponent*>(dialogue->AddComponent<GameEngine::SpriteRenderComponent>());
 	render->SetTexture(GameEngine::eTexture::PickUp);
 	render->SetZLevel(2);

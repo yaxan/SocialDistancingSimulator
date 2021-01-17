@@ -29,14 +29,14 @@ namespace Game
 		void HideDiagloue();
 		void ClearObstacles(int id);
 		int m_somegodid() { return m_backgroundid; };
-		void PickUpItem(int _id);
+		void PickUpItem(GameEngine::Entity*entity);
 		void Addpoint(int amount);
 		void CreatePoints();
 		bool IsGameOver() { return false; }
 		int m_id;
 		void CreateNPC(int npcNum);
 		std::vector<GameEngine::Entity*> m_obstacles;
-
+		GameEngine::Entity* m_interactingEntity;
 	private:
 		void CreatePlayer();
 		
@@ -52,6 +52,7 @@ namespace Game
 		GameEngine::Entity* m_healths;
 		GameEngine::Entity* m_weight;
 		GameEngine::Entity* m_healthbar;
+		
 
 		
 		int m_health;
